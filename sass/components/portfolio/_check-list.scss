@@ -1,0 +1,48 @@
+.check-list {
+  @extend %flex;
+  padding-left: 0;
+  margin-bottom: 50px;
+}
+
+.check-list__item {
+  list-style: none;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.check-list__btn {
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  border: none;
+  border-radius: 4px;
+
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--secondary-bgc);
+
+  cursor: pointer;
+
+  transition: box-shadow var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    background-color: var(--accent-color-background);
+    color: var(--accent-color-text);
+  }
+
+  &--active {
+    color: var(--accent-color-text);
+    background-color: var(--accent-color-background);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}

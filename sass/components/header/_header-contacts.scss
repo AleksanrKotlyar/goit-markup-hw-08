@@ -1,0 +1,39 @@
+.header-contacts {
+  @extend %flex;
+  margin-left: auto;
+}
+
+.header-contacts__item {
+  align-items: center;
+  margin-right: 30px;
+
+  color: currentColor;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  &:last-child,
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.header-contacts__link {
+  color: var(--primary-text-color);
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
+
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+
+  .header-contacts__link:hover &,
+  .header-contacts__link:focus & {
+    fill: var(--accent-color-background);
+  }
+}
