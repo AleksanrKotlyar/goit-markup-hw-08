@@ -1,6 +1,11 @@
 .promo {
-  padding-bottom: 98px;
-  text-align: center;
+  display: none;
+
+  @include mq(desktop) {
+    display: block;
+    padding-bottom: 98px;
+    text-align: center;
+  }
 }
 
 .promo__list {

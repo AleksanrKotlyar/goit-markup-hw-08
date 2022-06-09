@@ -568,33 +568,63 @@ ul {
   fill: var(--accent-color-background);
 }
 
-.features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+@media screen and (max-width: 1199.98px) {
+  .features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .features-list {
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .features-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
-.features__caption {
-  margin-bottom: 10px;
-  color: var(--secondary-text-color);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+@media screen and (max-width: 1199.98px) {
+  .features__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
-
-.features__item {
-  width: 270px;
+@media screen and (min-width: 768px) {
+  .features__item {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+  }
+  .features__item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .features__item:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
 }
-.features__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .features__item {
+    width: calc((100% - 90px) / 4);
+    margin-bottom: 0;
+  }
+  .features__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .features__icon {
@@ -609,8 +639,24 @@ ul {
           align-items: center;
   margin-bottom: 30px;
   height: 120px;
+  width: 100%;
   background: var(--secondary-bgc);
   border-radius: 4px;
+}
+
+.features__caption {
+  margin-bottom: 10px;
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+@media screen and (max-width: 767.98px) {
+  .features__caption {
+    text-align: center;
+  }
 }
 
 .features__desc {
@@ -618,8 +664,14 @@ ul {
 }
 
 .promo {
-  padding-bottom: 98px;
-  text-align: center;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .promo {
+    display: block;
+    padding-bottom: 98px;
+    text-align: center;
+  }
 }
 
 .promo__list {
