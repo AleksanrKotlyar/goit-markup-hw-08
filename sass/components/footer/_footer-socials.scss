@@ -1,5 +1,12 @@
 .footer-socials {
-  margin-right: 93px;
+  @include mq(mobile-only) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  @include mq(desktop) {
+    margin-right: 93px;
+  }
 }
 
 .footer-socials__caption {
@@ -16,7 +23,11 @@
 
 .footer-socials__list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+
+  @include mq(desktop) {
+    justify-content: flex-start;
+  }
 }
 
 .footer-socials__item {

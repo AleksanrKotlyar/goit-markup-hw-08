@@ -1,3 +1,11 @@
+.join-us {
+  @include mq(not-desktop) {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+  }
+}
+
 .footer-join__caption {
   display: inline-block;
   margin-bottom: 20px;
@@ -11,14 +19,15 @@
 }
 
 .footer-join__form {
-  display: flex;
+  @include mq(desktop) {
+    display: flex;
+  }
 }
 
 .footer-join__input-mail {
   padding: 16px 15px;
   margin-right: 12px;
 
-  width: 358px;
   height: 50px;
 
   background-color: transparent;
@@ -43,6 +52,15 @@
     font-size: 16px;
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
+  }
+  @include mq(not-desktop) {
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+
+  @include mq(desktop) {
+    width: 358px;
   }
 }
 
@@ -69,6 +87,10 @@
   &:hover,
   &:focus {
     background-color: var(--interactive-background-color);
+  }
+  @include mq(not-desktop) {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

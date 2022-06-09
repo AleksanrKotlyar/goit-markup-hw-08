@@ -1,8 +1,6 @@
 .features {
-  @include mq(not-desktop) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   @include mq(desktop) {
     padding-top: 94px;
@@ -11,8 +9,6 @@
 }
 
 .features-list {
-  // display: block;
-
   padding: 0;
 
   @include mq(tablet) {
@@ -33,7 +29,7 @@
   }
 
   @include mq(tablet) {
-    width: calc((100% - 30px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
     margin-right: 30px;
 
     &:nth-child(2n) {
@@ -45,7 +41,7 @@
   }
 
   @include mq(desktop) {
-    width: calc((100% - 90px) / 4);
+    flex-basis: calc((100% - 90px) / 4);
     margin-bottom: 0;
 
     &:not(:last-child) {
