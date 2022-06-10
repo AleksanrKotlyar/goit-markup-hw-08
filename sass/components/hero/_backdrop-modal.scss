@@ -25,8 +25,7 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-  width: 528px;
-  height: 581px;
+  width: 90%;
   padding: 40px;
 
   background-color: var(--main-bgc);
@@ -38,6 +37,17 @@
 
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  @include mq(mobile) {
+    width: 100%;
+    max-width: 450px;
+    height: 609px;
+  }
+
+  @include mq(desktop) {
+    width: 528px;
+    height: 581px;
   }
 }
 
@@ -53,7 +63,11 @@
 }
 
 .modal-form {
-  width: 448px;
+  max-width: 100%;
+
+  @include mq(desktop) {
+    width: 448px;
+  }
 }
 
 .modal-form__group {
@@ -161,8 +175,8 @@
 
 .modal-form__submit-btn {
   width: 200px;
-  padding: 0;
   height: 50px;
+  padding: 0;
 
   font-weight: 700;
   font-size: 16px;
@@ -223,12 +237,16 @@
 
 .modal-form__agreement-text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.67;
   letter-spacing: 0.03em;
-  margin: 0;
   display: inline-block;
-  width: auto;
+  margin: 0;
+
+  @include mq(desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-form__condition {
