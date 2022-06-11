@@ -1,21 +1,30 @@
 .header-contacts {
-  @extend %flex;
+  display: inline-block;
   margin-left: auto;
+
+  @include mq(desktop) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header-contacts__item {
-  align-items: center;
-  margin-right: 30px;
-
   color: currentColor;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  &:last-child,
-  &:last-child {
-    margin-right: 0;
+  @include mq(tablet-only) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include mq(desktop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -28,7 +37,11 @@
 
 .header-contacts__icon {
   fill: currentColor;
-  margin-right: 10px;
+
+  margin-right: 8px;
+  @include mq(desktop) {
+    margin-right: 10px;
+  }
 
   transition: fill var(--transition-duration) var(--transition-timing-function);
 

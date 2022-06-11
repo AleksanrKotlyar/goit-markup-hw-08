@@ -1,6 +1,13 @@
 .header {
   border-bottom: 1px solid #ececec;
+
   &-container {
-    @extend %flex;
+    display: none;
+
+    @include mq(tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }

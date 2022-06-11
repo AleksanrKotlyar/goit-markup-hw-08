@@ -33,7 +33,9 @@
           <a class="logo link" href="./index.html"
             >Web<span class="logo logo--black">Studio</span></a
           >
-          <!-- -- nav menu -- -->
+
+          <!--header-nav menu-->
+
           <ul class="header-menu list">
             <li class="header-menu__item">
               <a class="header-menu__link link header-menu__link--current" href="./index.html">
@@ -48,7 +50,9 @@
             </li>
           </ul>
         </nav>
-        <!-- -- header contacts -- -->
+
+        <!--header contacts-->
+
         <ul class="header-contacts list">
           <li class="header-contacts__item">
             <a
@@ -71,6 +75,116 @@
             >
           </li>
         </ul>
+      </div>
+
+      <!-- mobile menu -->
+      <div class="container mobile-wrapper">
+        <a class="logo link" href="./index.html">Web<span class="logo logo--black">Studio</span></a>
+        <button
+          type="button"
+          class="mob-menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="mob-menu__open-icon" href="./images/icons.svg#icon-mob-menu"></use>
+          </svg>
+        </button>
+
+        <div class="mob-menu-container js-menu-container" id=" mobile-menu">
+          <ul class="header-mob-menu list">
+            <li class="header-mob-menu__item">
+              <a
+                class="header-mob-menu__link link header-mob-menu__link--current"
+                href="./index.html"
+              >
+                Студия
+              </a>
+            </li>
+            <li class="header-mob-menu__item">
+              <a class="header-mob-menu__link link" href="./porfolio.html">Портфолио</a>
+            </li>
+            <li class="header-mob-menu__item">
+              <a class="header-mob-menu__link link" href="">Контакты</a>
+            </li>
+          </ul>
+
+          <!--mob contacts  -->
+          <ul class="header-mob-contacts list">
+            <li class="header-mob-contacts__item">
+              <a
+                class="header-mob-contacts__link link accent"
+                href="tel:+380961111111"
+                title="Набрать номер"
+              >
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="header-mob-contacts__item">
+              <a
+                class="header-mob-contacts__link link"
+                href="mailto:info@devstudio.com"
+                title="Отправить письмо"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <!-- mob socials -->
+          <ul class="header-mob-socials list">
+            <li class="header-mob-socials__item">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Перейти на страничку Instagram"
+                class="header-mob-socials__link link"
+                >Instagram</a
+              >
+            </li>
+            <li class="header-mob-socials__item">
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Перейти на страничку Twitter"
+                class="header-mob-socials__link link"
+                >Twitter</a
+              >
+            </li>
+            <li class="header-mob-socials__item">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Перейти на страничку Facebook"
+                class="header-mob-socials__link link"
+                >Facebook</a
+              >
+            </li>
+            <li class="header-mob-socials__item">
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Перейти на страничку Linkedin"
+                class="header-mob-socials__link link"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="mob-menu-close js-close-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="mob-menu__close-icon" href="./images/icons.svg#icon-close_mob-menu"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -219,30 +333,45 @@
             <li class="promo__item">
               <img
                 class="promo__img"
-                src="./images/webstudio/pc.jpg"
+                srcset="
+                  ./images/webstudio/promo/desk_370-min.jpg 1x,
+                  ./images/webstudio/promo/desk_740-min.jpg 2x
+                "
+                src="./images/webstudio/promo/desk_370-min.jpg"
                 alt="разработка ПО под ПК"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <p class="promo__label">Десктопные приложения</p>
             </li>
             <li class="promo__item">
               <img
                 class="promo__img"
-                src="./images/webstudio/phone.jpg"
+                srcset="
+                  ./images/webstudio/promo/note_370-min.jpg 1x,
+                  ./images/webstudio/promo/note_740-min.jpg 2x
+                "
+                src="./images/webstudio/promo/note_370-min.jpg"
                 alt="разработка ПО под телефоны"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <p class="promo__label">Мобильные приложения</p>
             </li>
             <li class="promo__item">
               <img
                 class="promo__img"
-                src="./images/webstudio/tablet.jpg"
+                srcset="
+                  ./images/webstudio/promo/tab_370-min.jpg 1x,
+                  ./images/webstudio/promo/tab_740-min.jpg 2x
+                "
+                src="./images/webstudio/promo/tab_370-min.jpg"
                 alt="разработка ПО под планшеты"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <p class="promo__label">Дизайнерские решения</p>
             </li>
@@ -258,10 +387,20 @@
             <li class="team__item">
               <img
                 class="team__img"
-                src="./images/webstudio/igor.jpg"
+                srcset="
+                  ./images/webstudio/team/igor_270-min.jpg 270w,
+                  ./images/webstudio/team/igor_354-min.jpg 354w,
+                  ./images/webstudio/team/igor_450-min.jpg 450w,
+                  ./images/webstudio/team/igor_540-min.jpg 540w,
+                  ./images/webstudio/team/igor_708-min.jpg 708w,
+                  ./images/webstudio/team/igor_900-min.jpg 900w
+                "
+                sizes="(min-width: 1200) 270w, (min-width: 768) 354w, (max-width: 767) 450w, 100vw"
+                src="./images/webstudio/team/igor_450-min.jpg"
                 alt="Фото Игоря"
                 width="270"
                 height="260"
+                loading="lazy"
               />
               <div class="team__descr">
                 <h3 class="team__name">Игорь Демьяненко</h3>
@@ -326,10 +465,20 @@
             <li class="team__item">
               <img
                 class="team__img"
-                src="./images/webstudio/olga.jpg"
+                srcset="
+                  ./images/webstudio/team/olga_270-min.jpg 270w,
+                  ./images/webstudio/team/olga_354-min.jpg 354w,
+                  ./images/webstudio/team/olga_450-min.jpg 450w,
+                  ./images/webstudio/team/olga_540-min.jpg 540w,
+                  ./images/webstudio/team/olga_708-min.jpg 708w,
+                  ./images/webstudio/team/olga_900-min.jpg 900w
+                "
+                sizes="(min-width: 1200) 270w, (min-width: 768) 354w, (max-width: 767) 450w, 100vw"
+                src="./images/webstudio/team/olga_450-min.jpg"
                 alt="Фото Ольги"
                 width="270"
                 height="260"
+                loading="lazy"
               />
               <div class="team__descr">
                 <h3 class="team__name">Ольга Репина</h3>
@@ -393,10 +542,20 @@
             <li class="team__item">
               <img
                 class="team__img"
-                src="./images/webstudio/nik.jpg"
+                srcset="
+                  ./images/webstudio/team/nik_270-min.jpg 270w,
+                  ./images/webstudio/team/nik_354-min.jpg 354w,
+                  ./images/webstudio/team/nik_450-min.jpg 450w,
+                  ./images/webstudio/team/nik_540-min.jpg 540w,
+                  ./images/webstudio/team/nik_708-min.jpg 708w,
+                  ./images/webstudio/team/nik_900-min.jpg 900w
+                "
+                sizes="(min-width: 1200) 270w, (min-width: 768) 354w, (max-width: 767) 450w, 100vw"
+                src="./images/webstudio/team/nik_450-min.jpg"
                 alt="Фото Николая"
                 width="270"
                 height="260"
+                loading="lazy"
               />
               <div class="team__descr">
                 <h3 class="team__name">Николай Тарасов</h3>
@@ -460,10 +619,20 @@
             <li class="team__item">
               <img
                 class="team__img"
-                src="./images/webstudio/mikle.jpg"
+                srcset="
+                  ./images/webstudio/team/mikle_270-min.jpg 270w,
+                  ./images/webstudio/team/mikle_354-min.jpg 354w,
+                  ./images/webstudio/team/mikle_450-min.jpg 450w,
+                  ./images/webstudio/team/mikle_540-min.jpg 540w,
+                  ./images/webstudio/team/mikle_708-min.jpg 708w,
+                  ./images/webstudio/team/mikle_900-min.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270w, (min-width: 768px) 354w, (max-width: 767px) 450w, 100vw"
+                src="./images/webstudio/team/mikle_450-min.jpg"
                 alt="Фото Михаила"
                 width="270"
                 height="260"
+                loading="lazy"
               />
               <div class="team__descr">
                 <h3 class="team__name">Михаил Ермаков</h3>
@@ -689,7 +858,7 @@
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Перейти на страничку Facebookr"
+                title="Перейти на страничку Facebook"
               >
                 <svg class="footer-socials__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-facebook"></use>
@@ -735,5 +904,12 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
