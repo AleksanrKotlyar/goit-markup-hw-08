@@ -229,7 +229,6 @@ ul {
   width: 100%;
   height: 100%;
   z-index: 20;
-  overflow-y: scroll;
   padding: 48px 40px;
   opacity: 0.8;
   -webkit-transform: translateX(-100%);
@@ -248,7 +247,7 @@ ul {
 
 .header-mob-menu__item {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 8.3333vw;
   line-height: 1.18;
   letter-spacing: 0.02em;
 }
@@ -276,7 +275,7 @@ ul {
 
 .header-mob-contacts__link {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 5vw;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
@@ -284,7 +283,7 @@ ul {
 
 .accent {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 7.0833vw;
   line-height: 1.18x;
   letter-spacing: 0.02em;
   color: var(--accent-color-background);
@@ -328,7 +327,7 @@ ul {
 
 .header-mob-socials__link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 3.75vw;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color-background);
@@ -583,6 +582,8 @@ ul {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   width: 90%;
+  max-height: calc(100vh - 30px);
+  overflow-y: auto;
   padding: 40px;
   background-color: var(--main-bgc);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1580,9 +1581,7 @@ ul {
 .gallery-list__item {
   background-color: var(--main-bgc);
   margin-bottom: 30px;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  max-width: 450px;
+  width: 100%;
 }
 @media screen and (max-width: 1199.98px) {
   .gallery-list__item:last-child {
@@ -1637,10 +1636,13 @@ ul {
 .overlay-thumb {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .gallery__img {
   width: 100%;
+  height: 100%;
 }
 
 .overlay-thumb__desc {
@@ -1649,7 +1651,6 @@ ul {
   bottom: 0;
   width: 100%;
   height: 100%;
-  overflow-y: auto;
   font-size: 18px;
   line-height: 1.56;
   color: var(--accent-color-text);
@@ -1662,9 +1663,6 @@ ul {
   transition: opacity var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function), opacity var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function), opacity var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-right: 24px;
   padding-left: 24px;
   padding-top: 77px;
@@ -1689,13 +1687,8 @@ ul {
 }
 
 .overlay-thumb__text {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   font-size: 18px;
   line-height: 1.56;
-  width: 100%;
-  height: 100%;
 }
 
 .gallery__descr {
