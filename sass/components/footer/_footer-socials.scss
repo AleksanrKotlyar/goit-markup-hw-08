@@ -1,5 +1,5 @@
 .footer-socials {
-  @include mq(mobile-only) {
+  @include mq(not-desktop) {
     text-align: center;
     margin-bottom: 60px;
   }

@@ -18,7 +18,7 @@
 
   @include mq(tablet-only) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(./images/webstudio/Hero/Hero-img_tb.jpg);
+      url(../images/webstudio/Hero/Hero-img_tb.jpg);
     @include mq(retina) {
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url(../images/webstudio/Hero/Hero-img_tb@2x.jpg);
