@@ -164,9 +164,18 @@
   }
 }
 
+.agreement-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 24px;
+  margin-bottom: 30px;
+}
+
 .modal-form__agreement {
   display: flex;
-  margin-bottom: 30px;
+
   align-items: center;
   justify-content: center;
 }
@@ -203,6 +212,14 @@
 }
 
 .modal-form__custom-checkbox {
+  position: absolute;
+  top: 2.75px;
+  left: 0;
+  // transform: translate(-50%, -50%);
+  @media screen and (max-width: 479px) {
+    top: 11px;
+  }
+
   display: inline-block;
   width: 16px;
   height: 15px;

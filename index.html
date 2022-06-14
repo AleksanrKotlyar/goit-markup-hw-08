@@ -5,25 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
-    <!-- Fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    /> -->
     <!-- Normalize -->
     <link rel="stylesheet" href="./css/modern-normalize.min.css" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/main.min.css" />
-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
   </head>
   <body>
     <!-- header -->
@@ -35,7 +20,6 @@
           >
 
           <!--header-nav menu-->
-
           <ul class="header-menu list">
             <li class="header-menu__item">
               <a class="header-menu__link link header-menu__link--current" href="./index.html">
@@ -50,7 +34,6 @@
             </li>
           </ul>
         </nav>
-
         <!--header contacts-->
 
         <ul class="header-contacts list">
@@ -241,19 +224,21 @@
                   ></textarea>
                 </label>
 
-                <label class="modal-form__agreement">
-                  <input
-                    type="checkbox"
-                    name="check-agreement"
-                    class="modal-form__agreement-checkbox visually-hidden"
-                  />
+                <div class="agreement-wrapper">
+                  <label class="modal-form__agreement">
+                    <input
+                      type="checkbox"
+                      name="check-agreement"
+                      class="modal-form__agreement-checkbox visually-hidden"
+                    />
 
-                  <span class="modal-form__agreement-text"
-                    >Соглашаюсь с рассылкой и принимаю
-                    <a class="modal-form__condition" href="/">Условия договора</a>
-                  </span>
-                  <span class="modal-form__custom-checkbox"></span>
-                </label>
+                    <span class="modal-form__agreement-text"
+                      >Соглашаюсь с рассылкой и принимаю
+                      <a class="modal-form__condition" href="/">Условия договора</a>
+                    </span>
+                    <span class="modal-form__custom-checkbox"></span>
+                  </label>
+                </div>
 
                 <button type="submit" class="modal-form__submit-btn">Отправить</button>
               </form>
