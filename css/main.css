@@ -802,6 +802,11 @@ ul {
     top: 11px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .modal-form__custom-checkbox {
+    top: 4.47px;
+  }
+}
 .modal-form__custom-checkbox:hover, .modal-form__custom-checkbox:focus {
   border-color: var(--accent-color-background);
 }

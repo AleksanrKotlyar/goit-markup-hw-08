@@ -219,6 +219,9 @@
   @media screen and (max-width: 479px) {
     top: 11px;
   }
+  @include mq(desktop) {
+    top: 4.47px;
+  }
 
   display: inline-block;
   width: 16px;
