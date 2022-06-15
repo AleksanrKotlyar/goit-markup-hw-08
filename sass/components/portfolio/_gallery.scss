@@ -111,7 +111,10 @@
 }
 
 .overlay-thumb__text {
-  font-size: 3.75vw;
+  @media screen and(max-width: 479px) {
+    font-size: 3.75vw;
+  }
+  font-size: 18px;
   line-height: 1.56;
 }
 
