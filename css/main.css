@@ -231,6 +231,11 @@ ul {
   transition: transform var(--transition-duration) var(--transition-timing-function), opacity var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function), opacity var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
 }
+@media screen and (max-height: 500px) {
+  .mob-menu-container {
+    overflow-y: scroll;
+  }
+}
 
 .mob-menu-container.is-open {
   opacity: 1;
@@ -598,6 +603,10 @@ ul {
   transition: opacity var(--transition-duration) var(--transition-timing-function), visibility var(--transition-duration) var(--transition-timing-function);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .is-hidden {
   pointer-events: none;
   opacity: 0;
@@ -625,6 +634,11 @@ ul {
 .backdrop.is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(1.2);
           transform: translate(-50%, -50%) scale(1.2);
+}
+@media screen and (max-height: 650px) {
+  .modal {
+    overflow-y: scroll;
+  }
 }
 @media screen and (min-width: 480px) {
   .modal {
